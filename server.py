@@ -13,7 +13,7 @@ pipe('''"I love this!" Is it positive? A:''')
 
 import socket
 import json
-from transformers import pipeline
+#from transformers import pipeline
 
 #pipe = pipeline(model='togethercomputer/GPT-JT-6B-v1')
 
