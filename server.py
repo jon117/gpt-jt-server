@@ -15,7 +15,7 @@ import socket
 import json
 from transformers import pipeline
 
-pipe = pipeline(model='togethercomputer/GPT-JT-6B-v1')
+#pipe = pipeline(model='togethercomputer/GPT-JT-6B-v1')
 
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket.bind(('localhost', 8080))
