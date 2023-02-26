@@ -34,8 +34,8 @@ while True:
         break
     
     #else run inference
-    result = pipe(data)
+    #result = pipe(data)
+    result = data
     
     #send the result back to the client
     client.send(result.encode('utf-8'))
-    
