@@ -12,7 +12,6 @@ pipe('''"I love this!" Is it positive? A:''')
 #return the result to the client
 
 import socket
-import json
 #from transformers import pipeline
 
 #pipe = pipeline(model='togethercomputer/GPT-JT-6B-v1')
@@ -28,12 +27,12 @@ while True:
     data = client.recv(1024)
     #decode the data
     data = data.decode('utf-8')
+    print("received: " + str(data))
     
     #if the data is 'exit', break the loop
     if data == 'exit':
         break
     
-    print(data)
     #else run inference
     #result = pipe(data)
     result = data

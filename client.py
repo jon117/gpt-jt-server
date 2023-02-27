@@ -9,6 +9,14 @@ import socket
 
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket.connect(('localhost', 8080))
+print("connected to server")
+
+print("testing connection...")
+socket.send("test".encode('utf-8'))
+result = socket.recv(1024)
+result = result.decode('utf-8')
+if result == "test":
+    print("connection successful")
 
 while True:
     #ask the user for input
