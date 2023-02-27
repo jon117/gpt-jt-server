@@ -16,6 +16,7 @@ import socket
 
 #pipe = pipeline(model='togethercomputer/GPT-JT-6B-v1')
 
+print("starting server...")
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket.bind(('localhost', 8080))
 socket.listen(5)
@@ -23,9 +24,10 @@ socket.listen(5)
 while True:
     #accept the connection
     client, address = socket.accept()
+    print("connected to client")
+
     #receive the data
     data = client.recv(1024)
-    #decode the data
     data = data.decode('utf-8')
     print("received: " + str(data))
     
