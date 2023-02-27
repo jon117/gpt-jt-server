@@ -28,4 +28,4 @@ while True:
     result = result.decode('utf-8')
     
     #display the result
-    print(result)
+    print("response: " + str(result))

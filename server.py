@@ -33,6 +33,7 @@ while True:
     if data == 'exit':
         break
     
+    print(data)
     #else run inference
     #result = pipe(data)
     result = data
